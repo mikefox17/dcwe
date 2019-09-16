@@ -49,7 +49,7 @@ router.post(
       if (!isMatch) {
         return res
           .status(400)
-          .json({ errors: [{ msg: "Invail Credentials" }] });
+          .json({ errors: [{ msg: "Invaild Credentials" }] });
       }
 
       const payload = {
