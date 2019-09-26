@@ -3,6 +3,7 @@ const router = express.Router();
 const auth = require("../../middleware/auth");
 const Profile = require("../../models/Profile");
 const User = require("../../models/User");
+const Post = require("../../models/Post");
 const { check, validationResult } = require("express-validator");
 const request = require("request");
 const config = require("config");
@@ -150,12 +151,12 @@ router.get("/user/:user_id", async (req, res) => {
 
 router.delete("/", auth, async (req, res) => {
   try {
-    //@todo- remove users posts
-
+    //remove users posts
+    await Post.deleteMany({ user: req.user.id });
     //remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
     //remove user
-    await Profile.findOneAndRemove({ _id: req.user.id });
+    await User.findOneAndRemove({ _id: req.user.id });
     res.json({ msg: "User profile deleted" });
   } catch (error) {
     console.log(error)(err.message);
@@ -350,12 +351,15 @@ router.get("/github/:username", (req, res) => {
       if (error) console.error(error);
 
       if (response.statusCode !== 200) {
-        return res.status(404).json({ msg: "No github profile found" });
+        return res.status(404).json({ msg: "No Github profile found" });
       }
+
       res.json(JSON.parse(body));
     });
-  } catch (error) {
-    conesole.error(err.message);
-    res.status(500).send("Server error");
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
   }
 });
+
+module.exports = router;
