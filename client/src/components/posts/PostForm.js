@@ -8,7 +8,7 @@ const PostForm = ({ addPost }) => {
 
   return (
     <div className="post-form">
-      <div className="bg-primary p">
+      <div className="has-background-primary p">
         <h3>Say Something...</h3>
       </div>
       <form
@@ -20,6 +20,7 @@ const PostForm = ({ addPost }) => {
         }}
       >
         <textarea
+          className="textarea is-rounded is-primary"
           name="text"
           cols="30"
           rows="5"
@@ -28,7 +29,12 @@ const PostForm = ({ addPost }) => {
           onChange={e => setText(e.target.value)}
           required
         />
-        <input type="submit" className="btn btn-dark my-1" value="Submit" />
+        <br />
+        <input
+          type="submit"
+          className="button is-dark is-rounded"
+          value="Submit"
+        />
       </form>
     </div>
   );

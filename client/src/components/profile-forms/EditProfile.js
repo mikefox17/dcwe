@@ -70,7 +70,7 @@ const EditProfile = ({
   return (
     <Fragment>
       <div className="container">
-        <h1 className="large text-primary">Create Your Profile</h1>
+        <h1 className="large has-text-primary">Edit Your Profile</h1>
         <p className="lead">
           <i className="fas fa-user"></i> Let's get some information to make
           your profile stand out
@@ -95,6 +95,7 @@ const EditProfile = ({
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="Company"
               name="company"
@@ -107,6 +108,7 @@ const EditProfile = ({
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="Website"
               name="website"
@@ -119,6 +121,7 @@ const EditProfile = ({
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="Location"
               name="location"
@@ -131,6 +134,7 @@ const EditProfile = ({
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="* Skills"
               name="skills"
@@ -143,6 +147,7 @@ const EditProfile = ({
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="Github Username"
               name="githubusername"
@@ -156,6 +161,7 @@ const EditProfile = ({
           </div>
           <div className="form-group">
             <textarea
+              className="textarea"
               placeholder="A short bio of yourself"
               name="bio"
               value={bio}
@@ -167,18 +173,19 @@ const EditProfile = ({
           <div className="my-2">
             <button
               type="button"
-              className="btn btn-light"
+              className="button is-rounded is-light"
               onClick={() => toggleSocialInputs(!displaySocialInputs)}
             >
               Add Social Network Links
             </button>
-            <span>Optional</span>
+            <span className="tag is-rounded">Optional</span>
           </div>
           {displaySocialInputs && (
             <Fragment>
               <div className="form-group social-input">
                 <i className="fab fa-twitter fa-2x"></i>
                 <input
+                  className="input"
                   type="text"
                   placeholder="Twitter URL"
                   name="twitter"
@@ -190,6 +197,7 @@ const EditProfile = ({
               <div className="form-group social-input">
                 <i className="fab fa-facebook fa-2x"></i>
                 <input
+                  className="input"
                   type="text"
                   placeholder="Facebook URL"
                   name="facebook"
@@ -201,6 +209,7 @@ const EditProfile = ({
               <div className="form-group social-input">
                 <i className="fab fa-youtube fa-2x"></i>
                 <input
+                  className="input"
                   type="text"
                   placeholder="YouTube URL"
                   name="youtube"
@@ -212,6 +221,7 @@ const EditProfile = ({
               <div className="form-group social-input">
                 <i className="fab fa-linkedin fa-2x"></i>
                 <input
+                  className="input"
                   type="text"
                   placeholder="Linkedin URL"
                   name="linkedin"
@@ -223,6 +233,7 @@ const EditProfile = ({
               <div className="form-group social-input">
                 <i className="fab fa-instagram fa-2x"></i>
                 <input
+                  className="input"
                   type="text"
                   placeholder="Instagram URL"
                   name="instagram"
@@ -233,9 +244,9 @@ const EditProfile = ({
             </Fragment>
           )}
 
-          <input type="submit" className="btn btn-primary my-1" />
+          <input type="submit" className="button is-rounded is-primary my-1" />
 
-          <Link to="/dashboard" className="btn btn-light my-1">
+          <Link to="/dashboard" className="button is-rounded is-light my-1">
             Go Back
           </Link>
         </form>

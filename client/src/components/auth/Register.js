@@ -55,7 +55,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   return (
     <Fragment>
       <section className="container">
-        <h1 className="large text-primary">Sign Up</h1>
+        <h1 className="large has-text-primary	">Sign Up</h1>
         <p className="lead">
           <i className="fas fa-user" /> Create Your Account
         </p>
@@ -102,7 +102,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               minLength="6"
             />
           </div>
-          <input type="submit" className="btn btn-primary" value="Register" />
+          <input
+            type="submit"
+            className="button is-primary is-rounded"
+            value="Register"
+          />
         </form>
         <p className="my-1">
           Already have an account? <Link to="/login">Sign In</Link>

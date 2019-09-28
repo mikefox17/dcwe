@@ -33,7 +33,7 @@ const AddEducation = ({ addEducation, history }) => {
   return (
     <Fragment>
       <div className="container">
-        <h1 className="large text-primary">Add your education</h1>
+        <h1 className="large has-text-primary">Add your education</h1>
         <p className="lead">
           <i className="fas fa-code-branch"></i> Add any school or bootcamp that
           you've attended
@@ -48,6 +48,7 @@ const AddEducation = ({ addEducation, history }) => {
         >
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="* School or Bootcamp"
               name="school"
@@ -58,6 +59,7 @@ const AddEducation = ({ addEducation, history }) => {
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="* Degree or Certificate"
               name="degree"
@@ -68,6 +70,7 @@ const AddEducation = ({ addEducation, history }) => {
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="Field of Study"
               name="fieldofstudy"
@@ -78,6 +81,7 @@ const AddEducation = ({ addEducation, history }) => {
           <div className="form-group">
             <h4>From Date</h4>
             <input
+              className="input"
               type="date"
               name="from"
               value={from}
@@ -87,6 +91,7 @@ const AddEducation = ({ addEducation, history }) => {
           <div className="form-group">
             <p>
               <input
+                className="input"
                 type="checkbox"
                 name="current"
                 checked={current}
@@ -103,6 +108,7 @@ const AddEducation = ({ addEducation, history }) => {
           <div className="form-group">
             <h4>To Date</h4>
             <input
+              className="input"
               type="date"
               name="to"
               value={to}
@@ -112,6 +118,7 @@ const AddEducation = ({ addEducation, history }) => {
           </div>
           <div className="form-group">
             <textarea
+              className="textarea"
               name="description"
               cols="30"
               rows="5"
@@ -120,8 +127,8 @@ const AddEducation = ({ addEducation, history }) => {
               onChange={e => onChange(e)}
             ></textarea>
           </div>
-          <input type="submit" className="btn btn-primary my-1" />
-          <Link to="/dashboard" className="btn btn-light my-1">
+          <input type="submit" className="button is-primary is-rounded my-1" />
+          <Link to="/dashboard" className="button is-light is-rounded my-1">
             Go Back
           </Link>
         </form>

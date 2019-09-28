@@ -23,7 +23,7 @@ const Dashboard = ({
   ) : (
     <Fragment>
       <div className="container">
-        <h1 className="large text-primary">Dashboard</h1>
+        <h1 className="large has-text-primary">Dashboard</h1>
         <p className="lead">
           <i className="fas fa-user"></i> Welcome {user && user.name}
         </p>
@@ -35,9 +35,9 @@ const Dashboard = ({
             <div className="my-2">
               <button
                 onClick={() => deleteAccount()}
-                className="btn btn-danger"
+                className="button is-danger is-rounded"
               >
-                <i className="fas fa-user-minus"> Delete My Account</i>
+                Delete My Account
               </button>
             </div>
           </Fragment>

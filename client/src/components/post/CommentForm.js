@@ -8,7 +8,7 @@ const CommentForm = ({ postId, addComment }) => {
 
   return (
     <div className="post-form">
-      <div className="bg-primary p">
+      <div className="has-background-primary p">
         <h3>Leave a Comment</h3>
       </div>
       <form
@@ -20,6 +20,7 @@ const CommentForm = ({ postId, addComment }) => {
         }}
       >
         <textarea
+          className="textarea is-primary"
           name="text"
           cols="30"
           rows="5"
@@ -28,7 +29,11 @@ const CommentForm = ({ postId, addComment }) => {
           onChange={e => setText(e.target.value)}
           required
         />
-        <input type="submit" className="btn btn-dark my-1" value="Submit" />
+        <input
+          type="submit"
+          className="button is-dark is-rounded my-1"
+          value="Submit"
+        />
       </form>
     </div>
   );

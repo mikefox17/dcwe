@@ -10,16 +10,16 @@ const Landing = ({ isAuthenticated }) => {
     <section className="landing">
       <div className="dark-overlay">
         <div className="landing-inner">
-          <h1 className="x-large">Developer Connector</h1>
+          <h1 className="x-large">DC Whiskey Exchange</h1>
           <p className="lead">
-            Create a developer profile/portfolio, share posts and get help from
-            other developers
+            Create a profile, share your bottles with the DMV locals. Setup
+            bottle trades with other users.
           </p>
           <div className="buttons">
-            <Link to="/register" className="btn btn-primary">
+            <Link to="/register" className="button is-primary is-rounded">
               Sign Up
             </Link>
-            <Link to="/login" className="btn btn-light">
+            <Link to="/login" className="button is-rounded">
               Login
             </Link>
           </div>

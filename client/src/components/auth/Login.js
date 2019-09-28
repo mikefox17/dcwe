@@ -32,7 +32,7 @@ const Login = ({ login, isAuthenticated }) => {
   return (
     <Fragment>
       <section className="container">
-        <h1 className="large text-primary">Sign In</h1>
+        <h1 className="large has-text-primary">Sign In</h1>
         <p className="lead">
           <i className="fas fa-user" /> Sign Into Your account
         </p>
@@ -59,7 +59,11 @@ const Login = ({ login, isAuthenticated }) => {
             />
           </div>
 
-          <input type="submit" className="btn btn-primary" value="Login" />
+          <input
+            type="submit"
+            className="button is-primary is-rounded"
+            value="Login"
+          />
         </form>
         <p className="my-1">
           Don't have an account? <Link to="/register">Sign Up</Link>

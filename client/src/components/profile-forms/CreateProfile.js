@@ -48,7 +48,7 @@ const CreateProfile = ({ createProfile, history }) => {
   return (
     <Fragment>
       <div className="container">
-        <h1 className="large text-primary">Create Your Profile</h1>
+        <h1 className="large has-text-primary">Create Your Profile</h1>
         <p className="lead">
           <i className="fas fa-user"></i> Let's get some information to make
           your profile stand out
@@ -73,6 +73,7 @@ const CreateProfile = ({ createProfile, history }) => {
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="Company"
               name="company"
@@ -85,6 +86,7 @@ const CreateProfile = ({ createProfile, history }) => {
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="Website"
               name="website"
@@ -97,6 +99,7 @@ const CreateProfile = ({ createProfile, history }) => {
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="Location"
               name="location"
@@ -109,6 +112,7 @@ const CreateProfile = ({ createProfile, history }) => {
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="* Skills"
               name="skills"
@@ -121,6 +125,7 @@ const CreateProfile = ({ createProfile, history }) => {
           </div>
           <div className="form-group">
             <input
+              className="input"
               type="text"
               placeholder="Github Username"
               name="githubusername"
@@ -134,6 +139,7 @@ const CreateProfile = ({ createProfile, history }) => {
           </div>
           <div className="form-group">
             <textarea
+              className="textarea"
               placeholder="A short bio of yourself"
               name="bio"
               value={bio}
@@ -145,7 +151,7 @@ const CreateProfile = ({ createProfile, history }) => {
           <div className="my-2">
             <button
               type="button"
-              className="btn btn-light"
+              className="button is-light is-rounded"
               onClick={() => toggleSocialInputs(!displaySocialInputs)}
             >
               Add Social Network Links
@@ -157,6 +163,7 @@ const CreateProfile = ({ createProfile, history }) => {
               <div className="form-group social-input">
                 <i className="fab fa-twitter fa-2x"></i>
                 <input
+                  className="input"
                   type="text"
                   placeholder="Twitter URL"
                   name="twitter"
@@ -168,6 +175,7 @@ const CreateProfile = ({ createProfile, history }) => {
               <div className="form-group social-input">
                 <i className="fab fa-facebook fa-2x"></i>
                 <input
+                  className="input"
                   type="text"
                   placeholder="Facebook URL"
                   name="facebook"
@@ -179,6 +187,7 @@ const CreateProfile = ({ createProfile, history }) => {
               <div className="form-group social-input">
                 <i className="fab fa-youtube fa-2x"></i>
                 <input
+                  className="input"
                   type="text"
                   placeholder="YouTube URL"
                   name="youtube"
@@ -190,6 +199,7 @@ const CreateProfile = ({ createProfile, history }) => {
               <div className="form-group social-input">
                 <i className="fab fa-linkedin fa-2x"></i>
                 <input
+                  className="input"
                   type="text"
                   placeholder="Linkedin URL"
                   name="linkedin"
@@ -201,6 +211,7 @@ const CreateProfile = ({ createProfile, history }) => {
               <div className="form-group social-input">
                 <i className="fab fa-instagram fa-2x"></i>
                 <input
+                  className="input"
                   type="text"
                   placeholder="Instagram URL"
                   name="instagram"
@@ -211,9 +222,9 @@ const CreateProfile = ({ createProfile, history }) => {
             </Fragment>
           )}
 
-          <input type="submit" className="btn btn-primary my-1" />
+          <input type="submit" className="button is-rounded is-primary my-1" />
 
-          <Link to="/dashboard" className="btn btn-light my-1">
+          <Link to="/dashboard" className="button is-rounded is-light my-1">
             Go Back
           </Link>
         </form>

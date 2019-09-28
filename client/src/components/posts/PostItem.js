@@ -23,7 +23,7 @@ const PostItem = ({
     <div>
       <p className="my-1">{text}</p>
       <p className="post-date">
-        Posted on <Moment format="YYYY/MM/DD">{date}</Moment>
+        Posted on <Moment format="MM/DD/YYYY">{date}</Moment>
       </p>
 
       {showActions && (
@@ -31,7 +31,7 @@ const PostItem = ({
           <button
             onClick={() => addLike(_id)}
             type="button"
-            className="btn btn-light"
+            className="button is-light is-rounded"
           >
             <i className="fas fa-thumbs-up" />{" "}
             <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
@@ -39,11 +39,11 @@ const PostItem = ({
           <button
             onClick={() => removeLike(_id)}
             type="button"
-            className="btn btn-light"
+            className="button is-light is-rounded"
           >
             <i className="fas fa-thumbs-down" />
           </button>
-          <Link to={`/posts/${_id}`} className="btn btn-primary">
+          <Link to={`/posts/${_id}`} className="button is-primary is-rounded">
             Discussion{" "}
             {comments.length > 0 && (
               <span className="comment-count">{comments.length}</span>
@@ -53,7 +53,7 @@ const PostItem = ({
             <button
               onClick={() => deletePost(_id)}
               type="button"
-              className="btn btn-danger"
+              className="button is-danger is-rounded"
             >
               <i className="fas fa-times" />
             </button>
